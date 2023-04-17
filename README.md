@@ -10,14 +10,11 @@ Make sure the input CSV file is in the same directory as the script. After the s
 
 ## Prerequisites
 
-To run this script, you need Python 3.x installed on your system along with the following Python libraries:
-
--   Folium
--   Pandas
+To run this script, you need Python 3.x installed on your system along with Folium and Pandas libraries.-   
 
 You can install these packages using pip:
 
-`pip install folium pandas` 
+`$ pip install folium pandas` 
 
 ## Input
 
