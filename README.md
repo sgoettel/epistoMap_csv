@@ -1,8 +1,8 @@
 # epistoMap
 
-This script is designed to create an interactive map visualization of letters sent between people from different locations. It reads input data from a CSV file, processes it, and generates an HTML file containing the map with sender and receiver markers and polylines connecting them.
+This script creates an interactive map visualization of letters sent between people from different locations unsing [Folium](https://python-visualization.github.io/folium/). It reads input data from a CSV file, processes it, and generates an HTML file containing the map with sender and receiver markers and polylines connecting them.
 
-To run the script, simply execute it in your terminal or command prompt with Python:
+To run the script, simply execute it in your terminal or command prompt:
 
 `$ python3 epistoMap.py` 
 
@@ -10,7 +10,7 @@ Make sure the input CSV file is in the same directory as the script. After the s
 
 ## Prerequisites
 
-To run this script, you need Python 3.x installed on your system along with Folium and Pandas libraries.-   
+To run you need Python 3.x along with Folium and Pandas libraries.
 
 You can install these packages using pip:
 
@@ -19,6 +19,7 @@ You can install these packages using pip:
 ## Input
 
 The input data should be a CSV file with the following columns:
+
 -   sender_id
 -   sender_name
 -   sender_place_lat (latitude)
@@ -30,8 +31,7 @@ The input data should be a CSV file with the following columns:
 -   receiver_place_long
 
 Each row in the CSV file should be a letter sent from a sender to a receiver. The latitude and longitude values should be numerical and correspond to the geographic locations of the sender and receiver.
-If you don't have the coordinates yet, you can use `geonames_coordinates.py` for GeoNames IDs, or `gnd_id_coordinates.py` for GND IDs from [this repo](https://github.com/sgoettel/teihdr2csv).
-
+If you don't have the coordinates yet, you can use `geonames_coordinates.py` for GeoNames IDs, or `gnd_id_coordinates.py` for GND IDs from [this repo](https://github.com/sgoettel/teihdr2csv) (see also [teihdr2csv](https://github.com/sgoettel/teihdr2csv) for how to extract data from TEI-encoded letters).
 
 
 ## Processing
@@ -43,3 +43,5 @@ The script employs the folium library to create an interactive map with two mark
 ## Output
 
 The output is an interactive HTML map with some features.  Senders and receivers are represented by distinct markers (arrow-up for senders, arrow-down for receivers) with polyline connections between sender and receiver locations. You easily can change the map tiles, adjust the offset value in the `add_offset` function to control the marker separation or alter the polyline color, weight, and popup content etc.
+
+Feel free to write a message if you find any bugs etc; happy mapping!
