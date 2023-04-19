@@ -51,6 +51,6 @@ The output is an interactive HTML map with some features.  Senders and receivers
 ### Things to implement
 
 - to somehow avoid the indistinguishable polylines and their overlapping: color-code the polylines (= polyline's weight) based on the number of letters exchanged between sender and receiver, e.g. if the count is less than 5, the weight is 2 and the color is "lightgray" etc.; tried a `def get_weight_and_color(count)` function and `ColorLine` (instead of `PolyLine`) class, not working. Also tried the `PolyLine` class from `folium.vector_layers`, not working.
-- seems like the offset is causing the same person to appear more than once in the same location, but this is to avoid overlapping markers when multiple senders or receivers are in the same location. Maybe `MarkerCluster` will help..
+- seems like the offset is causing the same person to appear more than once in the same location, but this is to avoid overlapping markers when multiple senders or receivers are in this exact same location. Maybe `MarkerCluster` will help..
 
 Feel free to write a message if you find any bugs etc!
