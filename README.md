@@ -2,6 +2,8 @@
 
 This script creates an interactive map visualization of letters sent between people from different locations unsing [Folium](https://python-visualization.github.io/folium/). It reads input data from a CSV file, processes it, and generates an HTML file containing the map with sender and receiver markers and polylines connecting them.
 
+>**Note** While it functions as intended, there are some areas for improvement and fine-tuning that I am working on as a beginner in this field. But since it is not that easy to get a "out of the box solution" for visualizing correspondence, I think it is still a good approach. If you would like to learn more about the features that I am working to implement and the challenges I am facing, please scroll down to the bottom of the page, otherwise: happy mapping!
+
 To run the script, simply execute it in your terminal or command prompt:
 
 `$ python3 epistoMap.py` 
@@ -44,4 +46,11 @@ The script employs the folium library to create an interactive map with two mark
 
 The output is an interactive HTML map with some features.  Senders and receivers are represented by distinct markers (arrow-up for senders, arrow-down for receivers) with polyline connections between sender and receiver locations. You easily can change the map tiles, adjust the offset value in the `add_offset` function to control the marker separation or alter the polyline color, weight, and popup content etc.
 
-Feel free to write a message if you find any bugs etc; happy mapping!
+---
+
+### Things to implement
+
+- to somehow avoid the indistinguishable polylines and their overlapping: color-code the polylines (= polyline's weight) based on the number of letters exchanged between sender and receiver, e.g. if the count is less than 5, the weight is 2 and the color is "lightgray" etc.; tried a `def get_weight_and_color(count)` function and `ColorLine` (instead of `PolyLine`) class, not working. Also tried the `PolyLine` class from `folium.vector_layers`, not working.
+- seems like the offset is causing the same person to appear more than once in the same location, but this is to avoid overlapping markers when multiple senders or receivers are in the same location. Maybe `MarkerCluster` will help..
+
+Feel free to write a message if you find any bugs etc!
