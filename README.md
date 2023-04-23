@@ -32,6 +32,8 @@ The input data should be a CSV file with the following columns:
 -   receiver_place_lat
 -   receiver_place_long
 
+I've included an example CSV with some letters from the [edition humboldt digital](https://edition-humboldt.de/).
+
 Each row in the CSV file should be a letter sent from a sender to a receiver. The latitude and longitude values should be numerical and correspond to the geographic locations of the sender and receiver.
 If you don't have the coordinates yet, you can use `geonames_coordinates.py` for GeoNames IDs, or `gnd_id_coordinates.py` for GND IDs from [this repo](https://github.com/sgoettel/teihdr2csv) (see also [teihdr2csv](https://github.com/sgoettel/teihdr2csv) for how to extract data from TEI-encoded letters).
 
