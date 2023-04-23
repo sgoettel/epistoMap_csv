@@ -1,6 +1,6 @@
 # epistoMap
 
-This script creates an interactive map visualization of letters sent between people from different locations using [Folium](https://python-visualization.github.io/folium/). It reads input data from a CSV file, processes it, and generates an HTML file containing the map with sender and receiver markers and polylines connecting them. If your input file is XML, check out [epistoMap (XML)](stilltocome)
+This script creates an interactive map visualization of letters sent between people from different locations using [Folium](https://python-visualization.github.io/folium/). It reads input data from a CSV file, processes it, and generates an HTML file containing the map with sender and receiver markers and polylines connecting them. If your input file is XML (and contains <correspDesc>), consider checking out my other script [epistoMap (XML)](https://github.com/sgoettel/epistoMap_xml)
 
 <img src="/image/epistomap_humboldt.png" alt="Output of the example CSV, edition humboldt digital" width="600" height="500">
 
@@ -8,9 +8,9 @@ This script creates an interactive map visualization of letters sent between peo
 
 To run the script, simply execute it in your terminal or command prompt:
 
-`$ python3 epistoMap.py` 
+`$ python3 epistoMap.py_csv` 
 
-Make sure the input CSV file is in the same directory as the script. After the script finishes running, you'll find the generated HTML file (`epistoMap_output.html`) in the same directory.
+Make sure the input CSV file is in the same directory as the script. After the script finishes running, you'll find the generated HTML file (`epistoMap_output_csv.html`) in the same directory.
 
 ## Prerequisites
 
@@ -48,7 +48,7 @@ The script employs the folium library to create an interactive map with two mark
 
 ## Output
 
-The output is an interactive HTML map with some features.  Senders and receivers are represented by distinct markers (arrow-up for senders, arrow-down for receivers) with polyline connections between sender and receiver locations. You easily can change the map tiles, adjust the offset value in the `add_offset` function to control the marker separation or alter the polyline color, weight, and popup content etc.
+The output is an interactive HTML map with some features.  Senders and receivers are represented by distinct markers (arrow-up for senders, arrow-down for receivers) with polyline connections between sender and receiver locations. You easily can change the map tiles, adjust the offset value in the `add_offset` function to control the marker separation or alter the weight and popup content etc.
 
 ---
 
