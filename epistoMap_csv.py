@@ -56,14 +56,14 @@ def populate_location_pairs(letters):
 letters = pd.read_csv(input_filename)
 
 # Initialize
-world_map = folium.Map(location=[50.0, 10.0], tiles="cartodb positron", zoom_start=5) # change the map tile, center and initial zoom here
+world_map = folium.Map(location=[50.0, 10.0], tiles="cartodb positron", zoom_start=5)
 marker_cluster_senders = FastMarkerCluster(data=[], name="Senders")
 marker_cluster_receivers = FastMarkerCluster(data=[], name="Receivers")
 location_pairs = populate_location_pairs(letters)
 sender_markers = {}
 receiver_markers = {}
 
-# Loop over the location_pairs dictionary and create markers and polylines
+# loop over the location_pairs dictionary and create markers and polylines
 for (sender_id, sender_lat, sender_long, receiver_id, receiver_lat, receiver_long), data in location_pairs.items():
     offset_sender_lat, offset_sender_long = add_offset(sender_lat, sender_long, OFFSET)
     offset_receiver_lat, offset_receiver_long = add_offset(receiver_lat, receiver_long, OFFSET)
