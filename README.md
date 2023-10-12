@@ -1,10 +1,10 @@
 # epistoMap
 
+>**Note** The script is no longer updated, for visualizations with CMIF as input please have a look at [epistoMap_xml](https://github.com/sgoettel/epistoMap_xml)
+
 This script creates an interactive map visualization of letters sent between people from different locations using [Folium](https://python-visualization.github.io/folium/). It reads input data from a CSV file, processes it, and generates an HTML file containing the map with sender and receiver markers and polylines connecting them. If your input file is XML (and contains `<correspDesc>`), consider checking out my other script [epistoMap (XML)](https://github.com/sgoettel/epistoMap_xml)
 
 <img src="/image/epistomap_humboldt.png" alt="Output of the example CSV, edition humboldt digital" width="600" height="500">
-
->**Note** While it functions as intended, there are some areas for improvement and fine-tuning that I am working on as a beginner in this field. But since it is not that easy to get a "out of the box solution" for visualizing correspondence, I think it is still a good approach. If you would like to learn more about the features that I am working to implement and the challenges I am facing, please scroll down to the bottom of the page, otherwise: happy mapping!
 
 To run the script, simply execute it in your terminal or command prompt:
 
